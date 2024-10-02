@@ -16,7 +16,7 @@ prefixo = "https://fbref.com"
 dataframes = [] 
 
 # Data de início para extração
-data_inicio = datetime.strptime('2024-04-13', '%Y-%m-%d')
+data_inicio = datetime.strptime('2024-09-17', '%Y-%m-%d')
 
 # Número máximo de tentativas falhadas
 max_falhas = 2
@@ -52,7 +52,7 @@ for _, row in link.iterrows():
 
         try:
             # Pausa de 4 segundos antes de cada requisição
-            time.sleep(4)
+            time.sleep(2)
             
             # Faz a requisição para a página
             response = requests.get(url_relatorio)
