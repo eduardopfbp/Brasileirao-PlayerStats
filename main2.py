@@ -9,9 +9,6 @@ import numpy as np
 # Carrega o DataFrame com os links
 link = pd.read_csv('C://Users//eduar//Desktop//DEV//Football//Brasileirao//links.csv')
 
-# Prefixo para os links
-prefixo = "https://fbref.com"
-
 # Lista para armazenar os DataFrames
 dataframes = [] 
 
@@ -48,7 +45,7 @@ for _, row in link.iterrows():
     
     # Verifica se a data do jogo é posterior ou igual à data de início
     if pd.to_datetime(data_jogo) >= data_inicio:
-        url_relatorio = prefixo + row['Link Relatório']  # Concatena o prefixo com o link
+        url_relatorio = row['Link Relatório']  # Link completo, sem a necessidade de prefixo
 
         try:
             # Pausa de 4 segundos antes de cada requisição
@@ -150,7 +147,7 @@ if dataframes:
 
     print(df_final)
 
-    # Salva o DataFrame final em um arquivo Excel
+    # Salva o DataFrame final em um arquivo CSV
     df_final.to_csv('C://Users//eduar//Desktop//DEV//Football//Brasileirao//database_temp.csv', index=False)
 else:
     print("Nenhum DataFrame para concatenar.")
