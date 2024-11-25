@@ -7,7 +7,7 @@ import re
 import numpy as np
 
 # Carrega o DataFrame com os links
-link = pd.read_csv('C://Users//eduar//Desktop//DEV//Football//Brasileirao//links.csv')
+link = pd.read_csv(r'C:\Users\eduar\OneDrive\Desktop\DEV\Football\Brasileirao\links.csv')
 
 # Prefixo para os links
 prefixo = "https://fbref.com"
@@ -16,7 +16,7 @@ prefixo = "https://fbref.com"
 dataframes = [] 
 
 # Data de início para extração
-data_inicio = datetime.strptime('2024-10-17', '%Y-%m-%d')
+data_inicio = datetime.strptime('2024-11-10', '%Y-%m-%d')
 
 # Número máximo de tentativas falhadas
 max_falhas = 2
@@ -151,6 +151,6 @@ if dataframes:
     print(df_final)
 
     # Salva o DataFrame final em um arquivo Excel
-    df_final.to_csv('C://Users//eduar//Desktop//DEV//Football//Brasileirao//database_temp.csv', index=False)
+    df_final.to_csv(r'C:\Users\eduar\OneDrive\Desktop\DEV\Football\Brasileirao\database_temp.csv', index=False)
 else:
     print("Nenhum DataFrame para concatenar.")
