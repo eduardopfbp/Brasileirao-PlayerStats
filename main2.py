@@ -13,7 +13,7 @@ link = pd.read_csv(r'C:\Users\eduar\OneDrive\Desktop\DEV\Football\Brasileirao\li
 dataframes = [] 
 
 # Data de início para extração
-data_inicio = datetime.strptime('2024-11-10', '%Y-%m-%d')
+data_inicio = datetime.strptime('2024-11-24', '%Y-%m-%d')
 
 # Número máximo de tentativas falhadas
 max_falhas = 2
